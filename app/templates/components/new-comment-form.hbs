@@ -6,9 +6,13 @@
       <h3 class="new-comment-header">New Comment</h3>
       {{#paper-button icon-button=true action='hideNewCommentForm'}}{{paper-icon "close" size=1}}{{/paper-button}}
     </div>
-    {{paper-input label="Author" value=author required=true}}
-    {{paper-input label="Content" required=true}}
-    {{#paper-button raised=true action="saveComment"}}Save Comment{{/paper-button}}
+    {{paper-input label="Author" value=author required=true key-down=(action "checkValidity")}}
+    {{paper-input label="Content" value=content maxlength="100" maxlength-errortext="Enter 100 characters or less." required=true key-down=(action "checkValidity")}}
+    {{#if validInput}}
+      {{#paper-button raised=true action="saveComment"}}Save Comment{{/paper-button}}
+    {{else}}
+      {{#paper-button raised=true disabled=true action="saveComment"}}Save Comment{{/paper-button}}
+    {{/if}}
 
   </div>
 

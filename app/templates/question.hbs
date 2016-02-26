@@ -1,23 +1,23 @@
 {{#paper-card}}
   {{#paper-card-content}}
 
-    <div class="post-entirety">
-      <div class="post-page-header">
+    <div class="question-entirety">
+      <div class="question-page-header">
         <br>
-        <div class="post-details">
-          <h2>{{model.question}}</h2>
-          <h3 class="post-tile-author"><small>{{model.author}} &bull; {{moment-from-now model.timestamp}}</small></h3>
-          <h4 class="post-tile-comment-total"><small>{{model.comments.length}} comments</small></h4>
+        <div class="question-details">
+          <h2>{{model.question.title}}</h2>
+          <h3 class="question-tile-author"><small>{{model.question.author}} &bull; {{moment-from-now model.question.timestamp}}</small></h3>
+          <h4 class="question-tile-comment-total"><small>{{model.question.comments.length}} comments</small></h4>
         </div>
       </div>
 
       <article>
-        {{markdown-to-html markdown=model.content}}
+        {{markdown-to-html markdown=model.question.content}}
       </article>
 
-      {{new-comment-form question=question saveComment="saveComment"}}
+      {{new-comment-form question=model.question saveComment="saveComment"}}
     </div>
   {{/paper-card-content}}
 {{/paper-card}}
 
-<!-- {{post-all-comments post=post destroyComment="destroyComment" editComment="editComment"}} -->
+{{all-comments question=model.question destroyComment="destroyComment" editComment="editComment"}}

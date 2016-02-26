@@ -7,5 +7,4 @@ export default DS.Model.extend({
   content: DS.attr(),
   comments: DS.hasMany('comment', {async: true}),
   edited_timestamp: DS.attr(),
-  //category: DS.belongsTo('category', {async: true})
 });
