@@ -12,9 +12,9 @@ export default Ember.Route.extend({
       this.transitionTo(route);
     },
 
-    // goToQuestion(questionID) {
-    //   this.transitionTo('question', questionID);
-    // },
+    goToQuestion(questionID) {
+      this.transitionTo('question', questionID);
+    },
     //
     // goToEdit(questionID) {
     //   this.transitionTo('edit', questionID);

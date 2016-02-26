@@ -3,7 +3,6 @@
     <h2>{{question.question}}</h2>
   {{/paper-card-content}}
   <div class="md-actions" layout="row" layout-align="end center">
-    {{#paper-button}}Action 1{{/paper-button}}
-    {{#paper-button}}Action 2{{/paper-button}}
+    {{#paper-button action="goToQuestion" param=question}}Read more...{{/paper-button}}
   </div>
 {{/paper-card}}

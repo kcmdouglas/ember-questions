@@ -1,0 +1,23 @@
+{{#paper-card}}
+  {{#paper-card-content}}
+
+    <div class="post-entirety">
+      <div class="post-page-header">
+        <br>
+        <div class="post-details">
+          <h2>{{model.question}}</h2>
+          <h3 class="post-tile-author"><small>{{model.author}} &bull; {{moment-from-now model.timestamp}}</small></h3>
+          <h4 class="post-tile-comment-total"><small>{{model.comments.length}} comments</small></h4>
+        </div>
+      </div>
+
+      <article>
+        {{markdown-to-html markdown=model.content}}
+      </article>
+
+      <!-- {{comment-new post=post saveComment="saveComment"}} -->
+    </div>
+  {{/paper-card-content}}
+{{/paper-card}}
+
+<!-- {{post-all-comments post=post destroyComment="destroyComment" editComment="editComment"}} -->

@@ -13,7 +13,7 @@ export default Ember.Component.extend({
         question: this.get('question'),
         content: this.get('content'),
         edited_timestamp: null,
-        category: this.get('paper-select'),
+        //category: this.get('paper-select'),
       };
       this.sendAction('saveQuestion', params);
     }

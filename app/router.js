@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('about');
   this.route('new-question');
   this.route('admin');
+  this.route('question', {path: '/question/:question_id'});
 });
 
 export default Router;
