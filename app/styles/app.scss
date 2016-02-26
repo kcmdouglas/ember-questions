@@ -1,1 +1,28 @@
 @import 'ember-paper';
+
+.md-toolbar-tools {
+  background-color: #7F4A46;
+}
+
+.md-sidenav-left {
+  background-color: #588C78;
+  height: 100vh;
+}
+
+.md-button {
+  background-color: #D96459;
+}
+
+.sidebar-buttons {
+  background-color: #588C78;
+  color: #EEE7E6;
+}
+
+md-card-content {
+  background-color: #EDAE72;
+}
+
+.icons {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}

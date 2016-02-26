@@ -3,15 +3,20 @@
     {{#paper-toolbar}}
       <div class="md-toolbar-tools">
         <div class="logo">
-          <strong>{{#link-to 'index'}}North Westy{{/link-to}}</strong>
+          <strong>{{#link-to 'index'}}NORTH WESTY{{/link-to}}</strong>
         </div>
       </div>
     {{/paper-toolbar}}
 
     {{#paper-content}}
       {{#paper-list}}
-        {{#paper-item action="transitionTo" param="index"}}Home{{/paper-item}}
-        {{#paper-item action="transitionTo" param="index"}}Another link{{/paper-item}}
+        {{#paper-item class="sidebar-buttons" action="transitionTo" param="index"}}{{paper-icon "home" size="2" class="icon"}}<strong>HOME</strong>{{/paper-item}}
+        {{#paper-item class="sidebar-buttons" action="transitionTo" param="index"}}{{paper-icon "landscape" size="2" class="icon"}}<strong>BACKPACKING</strong>{{/paper-item}}
+        {{#paper-item class="sidebar-buttons" action="transitionTo" param="index"}}{{paper-icon "style" size="2" class="icon"}}<strong>CAMPING</strong>{{/paper-item}}
+        {{#paper-item class="sidebar-buttons" action="transitionTo" param="index"}}{{paper-icon "nature-people" size="2" class="icon"}}<strong>HIKING</strong>{{/paper-item}}
+        {{#paper-item class="sidebar-buttons" action="transitionTo" param="index"}}{{paper-icon "star" size="2" class="icon"}}<strong>ASTRONOMY</strong>{{/paper-item}}
+        {{#paper-item class="sidebar-buttons" action="transitionTo" param="index"}}{{paper-icon "filter-vintage" size="2" class="icon"}}<strong>PLANT IDENTIFICATION</strong>{{/paper-item}}
+        {{#paper-item class="sidebar-buttons" action="transitionTo" param="index"}}{{paper-icon "favorite" size="2" class="icon"}}<strong>BIGFOOT</strong>{{/paper-item}}
       {{/paper-list}}
     {{/paper-content}}
   {{/paper-sidenav}}
@@ -22,7 +27,7 @@
         {{#paper-sidenav-toggle as |toggle|}}
           {{#paper-button target=toggle action="toggleMenu" icon-button=true}}{{paper-icon "menu"}}{{/paper-button}}
         {{/paper-sidenav-toggle}}
-        <span class="md-breadcrumb-page">Title</span>
+        <span class="md-breadcrumb-page">For all your outdoorsy, north westy questions</span>
       </div>
     {{/paper-toolbar}}
 
