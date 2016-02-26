@@ -3,14 +3,14 @@
     {{#paper-toolbar}}
       <div class="md-toolbar-tools">
         <div class="logo">
-          <strong>North Westy</strong>
+          <strong>{{#link-to 'index'}}North Westy{{/link-to}}</strong>
         </div>
       </div>
     {{/paper-toolbar}}
 
     {{#paper-content}}
       {{#paper-list}}
-        {{#paper-item action="transitionTo" param="index"}}Introduction{{/paper-item}}
+        {{#paper-item action="transitionTo" param="index"}}Home{{/paper-item}}
         {{#paper-item action="transitionTo" param="index"}}Another link{{/paper-item}}
       {{/paper-list}}
     {{/paper-content}}

@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'ember-questions',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-   firebase: 'https://ember-questions.firebaseio.com/',
+    firebase: 'https://ember-questions.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
