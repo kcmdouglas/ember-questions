@@ -3,15 +3,6 @@
     {{paper-input label="Author" value=author}}
     {{paper-input label="Question" value=question}}
     {{paper-input label="Content" value=content}}
-    {{#paper-select placeholder="Category" model=category}}
-      {{#paper-optgroup label="Categories"}}
-        {{#each category as |category|}}
-          {{#paper-option value=category.name}}
-            {{category.name}}
-          {{/paper-option}}
-        {{/each}}
-      {{/paper-optgroup}}
-    {{/paper-select}}
      {{#paper-button raised=true action="saveQuestion"}}Ask Away!{{/paper-button}}
   {{/paper-card-content}}
 {{/paper-card}}

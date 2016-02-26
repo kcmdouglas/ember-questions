@@ -13,9 +13,9 @@ export default Ember.Component.extend({
         question: this.get('question'),
         content: this.get('content'),
         edited_timestamp: null,
-        category: this.get('category'),
+        category: this.get('paper-select'),
       };
-      this.sendAction('savePost', params);
+      this.sendAction('saveQuestion', params);
     }
   }
 });
