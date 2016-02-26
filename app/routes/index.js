@@ -17,8 +17,16 @@ export default Ember.Route.extend({
       this.transitionTo('question', questionID);
     },
 
-    goToEdit(questionID) {
-      this.transitionTo('edit', questionID);
+    editQuestion(question, params) {
+      var route = this;
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!== undefined) {
+          question.set(key, params[key]);
+        }
+      });
+      question.save().then(function() {
+        route.refresh();
+      });
     },
 
     deleteQuestion(question) {

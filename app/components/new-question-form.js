@@ -10,7 +10,7 @@ export default Ember.Component.extend({
       var params = {
         author: this.get('author'),
         timestamp: Date.now(),
-        question: this.get('question'),
+        main_question: this.get('main_question'),
         content: this.get('content'),
         edited_timestamp: null,
       };

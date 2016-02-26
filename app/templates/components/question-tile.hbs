@@ -1,8 +1,25 @@
 {{#paper-card}}
   {{#paper-card-content}}
-    <h2>{{question.question}}</h2>
+    <h2>{{question.main_question}}</h2>
+  {{#if editQuestionForm}}
+    <div class="new-comment">
+      {{paper-divider}}
+
+      <div layout="row" layout-align="space-between center">
+        <h3 class="new-comment-header">Edit Comment</h3>
+        {{#paper-button icon-button=true action="hideEditQuestionForm"}}{{paper-icon "close" size=1}}{{/paper-button}}
+      </div>
+      {{paper-input placeholder=question.main_question value=main_question}}
+      {{paper-input placeholder=question.content value=content}}
+      {{#paper-button raised=true action="editQuestion" param=comment}}Edit Comment{{/paper-button}}
+    </div>
+
+    {{else}}
+      <div class="md-actions" layout="row" layout-align="end center">
+        {{#paper-button action="goToQuestion" param=question}}Read more...{{/paper-button}}
+        {{#paper-button action="showEditQuestionForm" param=question}}{{paper-icon "edit" size=2}}{{/paper-button}}
+        {{#paper-button action="deleteQuestion" param=question}}{{paper-icon "delete" size=2}}{{/paper-button}}
+      </div>
+  {{/if}}
   {{/paper-card-content}}
-  <div class="md-actions" layout="row" layout-align="end center">
-    {{#paper-button action="goToQuestion" param=question}}Read more...{{/paper-button}}
-  </div>
 {{/paper-card}}
