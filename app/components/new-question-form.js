@@ -1,0 +1,17 @@
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+  actions: {
+    saveQuestion() {
+      var params = {
+        author: this.get('author'),
+        timestamp: Date.now(),
+        question: this.get('question'),
+        content: this.get('content'),
+        edited_timestamp: null,
+        category: this.get('category'),
+      };
+      this.sendAction('savePost', params);
+    }
+  }
+});
