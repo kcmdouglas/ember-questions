@@ -1,6 +1,7 @@
 {{#paper-card}}
   {{#paper-card-content}}
     <h2>{{question.main_question}}</h2>
+    {{paper-divider}}
     <h3 class="question-tile-author"><small>{{question.author}} &bull; {{moment-from-now question.timestamp}}</small></h3>
 
   {{#if editQuestionForm}}
@@ -21,7 +22,7 @@
         <div class="">
           <h3 class="question-tile-comment-total"><small>{{question.comments.length}} comments</small></h3>
         </div>
-        <div class="post-buttons">
+        <div class="question-buttons">
           {{#paper-button action="goToQuestion" param=question}}Read more...{{/paper-button}}
           {{#paper-button action="showEditQuestionForm" param=question}}{{paper-icon "edit" size=2}}{{/paper-button}}
           {{#paper-button action="deleteQuestion" param=question}}{{paper-icon "delete" size=2}}{{/paper-button}}
